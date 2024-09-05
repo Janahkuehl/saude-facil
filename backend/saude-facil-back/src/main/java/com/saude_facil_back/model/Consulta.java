@@ -13,15 +13,17 @@ import java.util.Date;
 
 @Entity
 @NoArgsConstructor @AllArgsConstructor @Builder @Data
-public class medicamento {
+public class Consulta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
 
+    private String nomeMedico;
+    private String especialidade;
     private String descricao;
-    private String tempoLembrete;
-    private String imagem;
     private Date data;
+    private Integer tempoLembrete;
+
 
 }

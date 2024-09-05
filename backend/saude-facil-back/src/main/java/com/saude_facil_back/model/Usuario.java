@@ -1,5 +1,6 @@
 package com.saude_facil_back.model;
 
+import jakarta.annotation.Nonnull;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,21 +10,19 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
-
 @Entity
 @NoArgsConstructor @AllArgsConstructor @Builder @Data
-public class consulta {
+public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
 
-    private String nomeMedico;
-    private String especialidade;
-    private String descricao;
-    private Date data;
-    private Integer tempoLembrete;
-
+    @Nonnull
+    private String nome;
+    private String telefone;
+    private String sexo;
+    private Integer idade;
+    private boolean status;
 
 }

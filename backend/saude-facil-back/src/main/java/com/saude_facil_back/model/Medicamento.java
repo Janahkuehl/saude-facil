@@ -1,6 +1,5 @@
 package com.saude_facil_back.model;
 
-import jakarta.annotation.Nonnull;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,18 +9,19 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 @Entity
 @NoArgsConstructor @AllArgsConstructor @Builder @Data
-public class responsavel {
+public class Medicamento {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
 
-    @Nonnull
-    private String nome;
-    private String telefone;
-    private String email;
-    private Integer grauParentesco;
-    private boolean favorito;
+    private String descricao;
+    private String tempoLembrete;
+    private String imagem;
+    private Date data;
+
 }

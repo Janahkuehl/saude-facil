@@ -9,19 +9,17 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
-
 @Entity
 @NoArgsConstructor @AllArgsConstructor @Builder @Data
-public class notificacao {
+public class Notificacao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
 
     private String descricao;
-    private medicamento medicamento;
-    private consulta consulta;
+    private Medicamento medicamento;
+    private Consulta consulta;
     private boolean status;
 
 }

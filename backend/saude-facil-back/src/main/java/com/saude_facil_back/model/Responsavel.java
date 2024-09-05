@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @NoArgsConstructor @AllArgsConstructor @Builder @Data
-public class usuario {
+public class Responsavel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -21,8 +21,7 @@ public class usuario {
     @Nonnull
     private String nome;
     private String telefone;
-    private String sexo;
-    private Integer idade;
-    private boolean status;
-
+    private String email;
+    private Integer grauParentesco;
+    private boolean favorito;
 }
