@@ -16,18 +16,18 @@ public class ResponsavelService {
     ResponsavelRepository responsavelRepository;
 
     public List<Responsavel> findAll() {
-        return ResponsavelRepository.findAll();
+        return responsavelRepository.findAll();
     }
 
     public Responsavel findById(Integer id) {
-        return ResponsavelRepository.findById(id).orElse(null);
+        return responsavelRepository.findById(id).orElse(null);
     }
 
     public Responsavel save(Responsavel Responsavel) {
-        return ResponsavelRepository.save(Responsavel);
+        return responsavelRepository.save(Responsavel);
     }
 
     public void delete(Responsavel Responsavel) {
-        ResponsavelRepository.delete(Responsavel);
+        responsavelRepository.delete(Responsavel);
     }
 }

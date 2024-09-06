@@ -13,19 +13,19 @@ public class ConsultaService {
     ConsultaRepository consultaRepository;
 
     public List<Consulta> findAll() {
-        return ConsultaRepository.findAll();
+        return consultaRepository.findAll();
     }
 
     public Consulta findById(Integer id) {
-        return ConsultaRepository.findById(id).orElse(null);
+        return consultaRepository.findById(id).orElse(null);
     }
 
     public Consulta save(Consulta Consulta) {
-        return ConsultaRepository.save(Consulta);
+        return consultaRepository.save(Consulta);
     }
 
     public void delete(Consulta Consulta) {
-        ConsultaRepository.delete(Consulta);
+        consultaRepository.delete(Consulta);
     }
 }
 

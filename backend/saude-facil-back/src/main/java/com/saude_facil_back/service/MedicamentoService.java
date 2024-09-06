@@ -14,19 +14,19 @@ public class MedicamentoService {
     MedicamentoRepository medicamentoRepository;
 
     public List<Medicamento> findAll() {
-        return MedicamentoRepository.findAll();
+        return medicamentoRepository.findAll();
     }
 
     public Medicamento findById(Integer id) {
-        return MedicamentoRepository.findById(id).orElse(null);
+        return medicamentoRepository.findById(id).orElse(null);
     }
 
     public Medicamento save(Medicamento Medicamento) {
-        return MedicamentoRepository.save(Medicamento);
+        return medicamentoRepository.save(Medicamento);
     }
 
     public void delete(Medicamento Medicamento) {
-        MedicamentoRepository.delete(Medicamento);
+        medicamentoRepository.delete(Medicamento);
     }
 
 }

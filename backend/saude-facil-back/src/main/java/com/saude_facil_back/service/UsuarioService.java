@@ -16,18 +16,18 @@ public class UsuarioService {
     UsuarioRepository usuarioRepository;
 
     public List<Usuario> findAll() {
-        return UsuarioRepository.findAll();
+        return usuarioRepository.findAll();
     }
 
     public Usuario findById(Integer id) {
-        return UsuarioRepository.findById(id).orElse(null);
+        return usuarioRepository.findById(id).orElse(null);
     }
 
     public Usuario save(Usuario Usuario) {
-        return UsuarioRepository.save(Usuario);
+        return usuarioRepository.save(Usuario);
     }
 
     public void delete(Usuario Usuario) {
-        UsuarioRepository.delete(Usuario);
+        usuarioRepository.delete(Usuario);
     }
 }

@@ -14,19 +14,19 @@ public class NotificacaoService {
     NotificacaoRepository notificacaoRepository;
 
     public List<Notificacao> findAll() {
-        return NotificacaoRepository.findAll();
+        return notificacaoRepository.findAll();
     }
 
     public Notificacao findById(Integer id) {
-        return NotificacaoRepository.findById(id).orElse(null);
+        return notificacaoRepository.findById(id).orElse(null);
     }
 
     public Notificacao save(Notificacao Notificacao) {
-        return NotificacaoRepository.save(Notificacao);
+        return notificacaoRepository.save(Notificacao);
     }
 
     public void delete(Notificacao Notificacao) {
-        NotificacaoRepository.delete(Notificacao);
+        notificacaoRepository.delete(Notificacao);
     }
 
 }
