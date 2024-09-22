@@ -1,0 +1,50 @@
+.circle-button {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.arrow-left {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.btn-custom {
+  background-color: transparent;
+  border: none;
+  padding: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-custom:hover {
+  transform: translateY(-5px);
+}
+
+.btn-custom i {
+  color: black;
+}
+
+.btn-custom span {
+  font-size: 1rem;
+  color: black;
+}
+
+.btn-custom:hover i,
+.btn-custom:hover span {
+  color: #007bff;
+}

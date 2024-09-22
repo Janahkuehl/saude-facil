@@ -1,0 +1,63 @@
+.content {
+    text-align: center;
+    padding: 20px;
+}
+
+.content h5 {
+    margin-bottom: 20px;
+}
+
+.time-selector {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.time-selector input {
+    width: 50px;
+    text-align: center;
+    font-size: 24px;
+    border: none;
+    background: none;
+}
+
+.time-selector .btn {
+    margin: 10px;
+}
+
+.form-check {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.form-check-input {
+    margin-right: 10px;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.btn-link {
+    color: #6c757d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+.btn-light {
+    border-radius: 20px;
+}

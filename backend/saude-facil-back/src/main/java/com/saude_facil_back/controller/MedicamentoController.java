@@ -1,6 +1,5 @@
 package com.saude_facil_back.controller;
 
-import com.saude_facil_back.model.Consulta;
 import com.saude_facil_back.model.Medicamento;
 import com.saude_facil_back.service.MedicamentoService;
 import org.springframework.beans.factory.annotation.Autowired;

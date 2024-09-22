@@ -1,0 +1,30 @@
+.bg-light-purple {
+    background-color: #f3e8ff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #4d4d4d;
+    margin-bottom: 0.5rem;
+}
+
+.btn-confirm {
+    background-color: #28a745;
+    color: #f3e8ff;
+    border-color: #28a745;
+    border-radius: 20px;
+    width: 150px;
+    height: 40px;
+    font-size: 1rem;
+}
+
+.btn-confirm:hover {
+    background-color: #218838;
+}

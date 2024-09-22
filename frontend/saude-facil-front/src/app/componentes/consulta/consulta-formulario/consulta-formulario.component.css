@@ -1,0 +1,44 @@
+.circle-button {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    position: relative;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.arrow-left {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+h5 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+button.btn-success {
+    background-color: #28a745;
+    color: #f3e8ff;
+    border-color: #28a745;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}

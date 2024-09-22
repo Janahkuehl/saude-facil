@@ -1,0 +1,19 @@
+h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+button.btn-success {
+    background-color: #28a745;
+    color: #f3e8ff;
+    border-color: #28a745;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
