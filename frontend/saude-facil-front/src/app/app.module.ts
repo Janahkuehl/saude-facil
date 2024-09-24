@@ -27,6 +27,7 @@ import { ConsultaImagemComponent } from './componentes/consulta/consulta-imagem/
 import { MedicamentoHojeComponent } from './componentes/medicamento/medicamento-hoje/medicamento-hoje.component';
 import { NotificacaoConsultaComponent } from './componentes/notificacao/notificacao-consulta/notificacao-consulta.component';
 import { NotificacaoImagemComponent } from './componentes/notificacao/notificacao-imagem/notificacao-imagem.component';
+import { HojeComponent } from './componentes/compartilhados/hoje/hoje.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { NotificacaoImagemComponent } from './componentes/notificacao/notificaca
     ConsultaImagemComponent,
     MedicamentoHojeComponent,
     NotificacaoConsultaComponent,
-    NotificacaoImagemComponent
+    NotificacaoImagemComponent,
+    HojeComponent
   ],
   imports: [
     BrowserModule,

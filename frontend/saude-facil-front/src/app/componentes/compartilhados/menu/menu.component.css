@@ -1,24 +1,31 @@
-
-  
-  footer {
-
-    width: 100%;
-    padding: 10px;
-    background-color: #9afcaade;
-  }
-
-nav {
+.navbar-bottom {
+  background-color: #9afcaade;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  padding: 10px 0;
+  cursor: pointer;
 }
 
-nav div {
-  min-width: 110px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.navbar-bottom .nav-item {
+  text-align: center;
 }
 
+.navbar-bottom .nav-item i {
+  font-size: 24px;
+  color: #141414;
+}
 
+.navbar-bottom .nav-item p {
+  margin: 0;
+  font-size: 12px;
+  color: #141414;
+}
 
+.navbar-bottom .nav-item:hover i,
+.navbar-bottom .nav-item:hover p {
+  color: #665d5d;
+}

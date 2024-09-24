@@ -1,21 +1,21 @@
 <div class="container mt-4">
     <div class="row">
-        <h2 class="page-title">Contatos</h2>
+        <h2 class="page-title">Responsáveis</h2>
     </div>
 
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="consulta-item d-flex justify-content-between align-items-center" onclick="editarContato('Janaina')">
+            <div class="consulta-item d-flex justify-content-between align-items-center" routerLink="/responsavel-formulario">
                 <span>Janaina - Filha</span>
-                <i class="bi bi-star-fill" style="color: gold;"></i> <!-- Ícone de estrela preenchida -->
+                <i class="bi bi-star-fill" style="color: gold;"></i> 
             </div>
-            <div class="consulta-item" onclick="editarContato('Karina')">
+            <div class="consulta-item" onclick="editarContato ('Karina')" routerLink="/responsavel-formulario">
                 <span>Karina - Filha</span>
             </div>
-            <div class="consulta-item" onclick="editarContato('Karla')">
+            <div class="consulta-item" onclick="editarContato('Karla')" routerLink="/responsavel-formulario">
                 <span>Karla - Filha</span>
             </div>
-            <div class="consulta-item" onclick="editarContato('Jailson')">
+            <div class="consulta-item" onclick="editarContato('Jailson')" routerLink="/responsavel-formulario">
                 <span>Jailson - Genro</span>
             </div>
         </div>
@@ -23,7 +23,7 @@
 
     <div class="row mt-3 justify-content-center">
         <div class="col-md-8 text-center">
-            <button class="btn btn-success custom-btn">Inserir novo</button>
+            <button class="btn btn-success custom-btn"routerLink="/ResponsavelFormularioComponent" routerLink="/responsavel-formulario">Inserir novo</button>
         </div>
     </div>
 </div>
