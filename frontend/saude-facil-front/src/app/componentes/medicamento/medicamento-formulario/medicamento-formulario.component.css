@@ -24,10 +24,21 @@
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-input[type="text"] {
+h5 {
     font-size: 1rem;
-    height: 50px;
-    background-color: #f4f4f4;
-    border: none;
-    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+button.btn-success {
+    background-color: #28a745;
+    color: #f3e8ff;
+    border-color: #28a745;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+.btn-success:hover {
+    background-color: #218838;
 }

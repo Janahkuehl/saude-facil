@@ -31,20 +31,24 @@
         <div class="col-12">
             <div class="p-4 bg-light rounded">
                 <div class="mb-3">
-                    <label for="nome" class="form-label">Nome do Médico ou Exame</label>
-                    <input type="text" class="form-control" id="nome" placeholder="Digite o nome">
+                    <label for="nomeMedico" class="form-label">Nome do Médico</label>
+                    <input type="text" class="form-control" id="nomeMedico" name="nomeMedico" placeholder="Digite o nome" [(ngModel)]="consulta.nomeMedico">
+                </div>
+                <div class="mb-3">
+                    <label for="exame" class="form-label">Exame</label>
+                    <input type="text" class="form-control" id="exame" name="exame" placeholder="Digite o nome" [(ngModel)]="consulta.exame">
                 </div>
                 <div class="mb-3">
                     <label for="especialidade" class="form-label">Especialidade</label>
-                    <input type="text" class="form-control" id="especialidade" placeholder="Digite a especialidade">
+                    <input type="text" class="form-control" id="especialidade" name="especialidade" placeholder="Digite a especialidade" [(ngModel)]="consulta.especialidade">
                 </div>
                 <div class="mb-3">
                     <label for="endereco" class="form-label">Endereço</label>
-                    <input type="text" class="form-control" id="endereco" placeholder="Digite o endereço">
+                    <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Digite o endereço" [(ngModel)]="consulta.endereco">
                 </div>
                 <div class="mb-3">
                     <label for="nota" class="form-label">Nota</label>
-                    <input type="text" class="form-control" id="nota" placeholder="Adicione uma nota">
+                    <input type="text" class="form-control" id="nota" name="nota" placeholder="Adicione uma nota" [(ngModel)]="consulta.nota">
                 </div>
                 <div class="form-check mb-3">
                     <input class="form-check-input" type="checkbox" id="lembrete">
@@ -52,7 +56,7 @@
                         Lembrete
                     </label>
                 </div>
-                <button type="submit" class="btn btn-success w-100">Confirmar</button>
+                <button type="submit" class="btn btn-success w-100" (click)="salvar()">Confirmar</button>
             </div>
         </div>
     </div>

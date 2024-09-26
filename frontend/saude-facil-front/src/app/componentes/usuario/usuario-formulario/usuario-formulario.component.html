@@ -3,25 +3,25 @@
         <form>
             <div class="mb-3">
                 <label for="nomeCompleto" class="form-label">Nome Completo</label>
-                <input type="text" class="form-control" id="nomeCompleto" placeholder="Digite seu nome Completo">
+                <input type="text" class="form-control" id="nomeCompleto" name="nomeCompleto" placeholder="Digite seu nome Completo" [(ngModel)]="usuario.nome">
             </div>
             <div class="mb-3">
                 <label for="telefone" class="form-label">Telefone</label>
-                <input type="tel" class="form-control" id="telefone" placeholder="Digite seu telefone">
+                <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Digite seu telefone" [(ngModel)]="usuario.telefone">
             </div>
             <div class="mb-3">
                 <label for="idade" class="form-label">Idade</label>
-                <input type="number" class="form-control" id="idade" placeholder="Idade">
+                <input type="number" class="form-control" id="idade" name="idade" placeholder="Idade" [(ngModel)]="usuario.idade">
             </div>
             <div class="mb-3">
                 <label for="sexo" class="form-label">Sexo</label>
-                <select class="form-select" id="sexo">
+                <select class="form-select" id="sexo" name="sexo" [(ngModel)]="usuario.sexo">
                     <option selected disabled>Selecione</option>
                     <option value="Masculino">Masculino</option>
                     <option value="Feminino">Feminino</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-success w-100 rounded-pill">Cadastrar</button>
+            <button class="btn btn-success w-100 rounded-pill" (click)="salvar()">Cadastrar</button>
         </form>
     </div>
 </div>

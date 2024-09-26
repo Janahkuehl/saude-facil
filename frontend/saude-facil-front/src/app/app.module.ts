@@ -28,6 +28,8 @@ import { MedicamentoHojeComponent } from './componentes/medicamento/medicamento-
 import { NotificacaoConsultaComponent } from './componentes/notificacao/notificacao-consulta/notificacao-consulta.component';
 import { NotificacaoImagemComponent } from './componentes/notificacao/notificacao-imagem/notificacao-imagem.component';
 import { HojeComponent } from './componentes/compartilhados/hoje/hoje.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -62,6 +64,8 @@ import { HojeComponent } from './componentes/compartilhados/hoje/hoje.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

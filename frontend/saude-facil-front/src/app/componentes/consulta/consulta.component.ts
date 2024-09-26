@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Consulta } from '../interfaces/consulta';
+import { ConsultaService } from '../../servicos/consulta.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-consulta',
@@ -6,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrl: './consulta.component.css'
 })
 export class ConsultaComponent {
+
+
+
 
 }

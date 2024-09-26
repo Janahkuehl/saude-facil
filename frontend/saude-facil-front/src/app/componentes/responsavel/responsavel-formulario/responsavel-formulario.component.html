@@ -3,27 +3,29 @@
         <form>
             <div class="mb-3">
                 <label for="nomeCompleto" class="form-label">Nome Completo</label>
-                <input type="text" class="form-control" id="nomeCompleto" placeholder="Nome Completo">
+                <input type="text" class="form-control" id="nomeCompleto" name="nomeCompleto"
+                    placeholder="Nome Completo" [(ngModel)]="responsavel.nome">
             </div>
             <div class="mb-3">
                 <label for="telefone" class="form-label">Telefone</label>
-                <input type="tel" class="form-control" id="telefone" placeholder="Telefone">
+                <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Telefone" [(ngModel)]="responsavel.telefone">
             </div>
-            <div class="mb-3">
+            <div class=" mb-3">
                 <label for="email" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="email" placeholder="E-mail">
+                <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" [(ngModel)]="responsavel.email">
             </div>
-            <div class="mb-3">
+            <div class=" mb-3">
                 <label for="grauParentesco" class="form-label">Grau Parentesco</label>
-                <input type="text" class="form-control" id="grauParentesco" placeholder="Grau Parentesco">
+                <input type="text" class="form-control" id="grauParentesco" name="grauParentesco" placeholder="Parentesco" [(ngModel)]="responsavel.grauParentesco">
             </div>
-            <div class="mb-3 form-check">
+            <div class=" mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="favorito">
                 <label class="form-check-label" for="favorito">Favorito</label>
             </div>
             <div class="d-flex justify-content-center gap-2">
-                <button type="button" class="btn btn-outline-secondary rounded-pill" routerLink="/responsavel">Voltar</button>
-                <button type="submit" class="btn btn-success rounded-pill" routerLink="/responsavel">Confirmar</button>
+                <button type="button" class="btn btn-outline-secondary rounded-pill"
+                    routerLink="/responsavel">Voltar</button>
+                <button type="submit" class="btn btn-success rounded-pill" (click)="salvar()">Confirmar</button>
             </div>
         </form>
     </div>
