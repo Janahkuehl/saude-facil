@@ -23,10 +23,11 @@ public class Consulta {
     private Integer id;
 
     private String nomeMedico;
+    private String exame;
     private String especialidade;
-    private String descricao;
+    private String endereco;
     private Date data;
     private Integer tempoLembrete;
-
+    private String nota;
 
 }

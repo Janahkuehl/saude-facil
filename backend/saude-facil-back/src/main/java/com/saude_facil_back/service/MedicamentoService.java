@@ -29,4 +29,8 @@ public class MedicamentoService {
         medicamentoRepository.delete(Medicamento);
     }
 
+    public List<Medicamento> obterMedicamentosHoje() {
+        return medicamentoRepository.obterMedicamentosHoje();
+    }
+
 }

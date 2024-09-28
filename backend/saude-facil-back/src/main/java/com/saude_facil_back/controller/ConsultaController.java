@@ -41,4 +41,9 @@ public class ConsultaController {
         consultaService.delete(consulta);
         return ResponseEntity.ok(consulta);
     }
+
+    @GetMapping("/consultas-hoje")
+    public ResponseEntity<List<Consulta>> obterConsultasHoje() {
+        return ResponseEntity.ok(consultaService.obterConsultasHoje());
+    }
 }

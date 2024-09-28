@@ -27,5 +27,9 @@ public class ConsultaService {
     public void delete(Consulta Consulta) {
         consultaRepository.delete(Consulta);
     }
+
+    public List<Consulta> obterConsultasHoje() {
+        return consultaRepository.obterConsultasHoje();
+    }
 }
 
