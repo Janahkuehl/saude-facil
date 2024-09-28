@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -30,7 +30,13 @@ import { NotificacaoImagemComponent } from './componentes/notificacao/notificaca
 import { HojeComponent } from './componentes/compartilhados/hoje/hoje.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { UsuarioRecuperarSenhaComponent } from './componentes/usuario/usuario-recuperar-senha/usuario-recuperar-senha.component';
 
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+import { UsuarioAlterarSenhaComponent } from './componentes/usuario/usuario-alterar-senha/usuario-alterar-senha.component';
+
+registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
@@ -59,7 +65,9 @@ import { HttpClientModule } from '@angular/common/http';
     MedicamentoHojeComponent,
     NotificacaoConsultaComponent,
     NotificacaoImagemComponent,
-    HojeComponent
+    HojeComponent,
+    UsuarioAlterarSenhaComponent,
+    UsuarioRecuperarSenhaComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +75,9 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'pt-BR' } 
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,4 @@
+<app-cabecalho></app-cabecalho>
 <div class="container mt-4">
     <div class="row">
         <h2 class="page-title">Responsáveis</h2>
@@ -5,18 +6,11 @@
 
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="consulta-item d-flex justify-content-between align-items-center" routerLink="/responsavel-formulario">
-                <span>Janaina - Filha</span>
-                <i class="bi bi-star-fill" style="color: gold;"></i> 
-            </div>
-            <div class="consulta-item" onclick="editarContato ('Karina')" routerLink="/responsavel-formulario">
-                <span>Karina - Filha</span>
-            </div>
-            <div class="consulta-item" onclick="editarContato('Karla')" routerLink="/responsavel-formulario">
-                <span>Karla - Filha</span>
-            </div>
-            <div class="consulta-item" onclick="editarContato('Jailson')" routerLink="/responsavel-formulario">
-                <span>Jailson - Genro</span>
+            <div class="consulta-item d-flex justify-content-between align-items-center" 
+            routerLink="/responsavel-formulario" 
+            *ngFor="let responsavel of listaResponsaveis">
+                <span>{{responsavel.nome}} - {{responsavel.grauParentesco}}</span>
+                <i *ngIf="responsavel.favorito" class="bi bi-star-fill" style="color: gold;"></i> 
             </div>
         </div>
     </div>
@@ -27,3 +21,4 @@
         </div>
     </div>
 </div>
+<app-menu></app-menu>

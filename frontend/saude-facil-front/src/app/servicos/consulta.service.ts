@@ -31,4 +31,8 @@ export class ConsultaService {
   delete(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
+
+  obterConsultasHoje(): Observable<Consulta[]> {
+    return this.http.get<Consulta[]>(`${this.apiUrl}/consultas-hoje`);
+  }
 }

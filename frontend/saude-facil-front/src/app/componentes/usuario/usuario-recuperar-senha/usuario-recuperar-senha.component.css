@@ -1,0 +1,30 @@
+.container-redefinir-senha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.card-redefinir-senha {
+    background-color: #d4edda;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-custom {
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn-custom:hover {
+    background-color: #218838;
+}
+
+.alert-custom {
+    background-color: #5a9367;
+    color: white;
+    border-radius: 5px;
+}

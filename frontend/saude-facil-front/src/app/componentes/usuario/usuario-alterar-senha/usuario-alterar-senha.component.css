@@ -1,0 +1,42 @@
+.container-alterar-senha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.card-alterar-senha {
+    background-color: #d4edda;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+button.btn-custom {
+    background-color: #28a745;
+    color: #f3e8ff;
+    border-color: #28a745;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+.btn-custom:hover {
+    background-color: #218838;
+}
+
+.btn-secondary {
+    color: #FFF;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.btn-secondary:hover {
+    text-decoration: underline;
+}
+

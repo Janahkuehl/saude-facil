@@ -22,11 +22,15 @@ import { ConsultaHojeComponent } from './componentes/consulta/consulta-hoje/cons
 import { ConsultaImagemComponent } from './componentes/consulta/consulta-imagem/consulta-imagem.component';
 import { ConsultaLembreteComponent } from './componentes/consulta/consulta-lembrete/consulta-lembrete.component';
 import { HojeComponent } from './componentes/compartilhados/hoje/hoje.component';
+import { UsuarioAlterarSenhaComponent } from './componentes/usuario/usuario-alterar-senha/usuario-alterar-senha.component';
+import { UsuarioRecuperarSenhaComponent } from './componentes/usuario/usuario-recuperar-senha/usuario-recuperar-senha.component';
 
 const routes: Routes = [
   {path: 'login', component: UsuarioLoginComponent},
   {path: 'usuario-formulario', component: UsuarioFormularioComponent},
   {path: 'usuario-foto', component: UsuarioFotoComponent},
+  {path: 'usuario-esquecisenha', component: UsuarioAlterarSenhaComponent},
+  {path: 'usuario-recuperar-senha', component: UsuarioRecuperarSenhaComponent},
 
   {path: 'responsavel', component: ResponsavelComponent},
   {path: 'responsavel-formulario', component: ResponsavelFormularioComponent},

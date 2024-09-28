@@ -1,0 +1,24 @@
+<app-cabecalho></app-cabecalho>
+<div class="container-alterar-senha">
+    <div class="card-alterar-senha">
+        <form>
+            <div class="form-group">
+                <label for="senhaAtual">Digite a senha atual</label>
+                <input type="password" class="form-control" id="senhaAtual" placeholder="Digite a senha atual">
+            </div>
+            <div class="form-group">
+                <label for="novaSenha">Digite a nova senha</label>
+                <input type="password" class="form-control" id="novaSenha" placeholder="Digite a nova senha">
+            </div>
+            <div class="d-flex justify-content-between">
+                <button type="button" class="btn btn-secondary" routerLink="/login">Cancelar</button>
+                <button type="submit" class="btn btn-custom" routerLink="/hoje">Confirmar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<app-menu></app-menu>
