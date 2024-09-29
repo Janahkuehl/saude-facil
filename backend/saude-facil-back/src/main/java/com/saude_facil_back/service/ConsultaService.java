@@ -31,5 +31,13 @@ public class ConsultaService {
     public List<Consulta> obterConsultasHoje() {
         return consultaRepository.obterConsultasHoje();
     }
+
+    public List<Consulta> obterConsultasAgendadas() {
+        return consultaRepository.obterConsultasAgendadas();
+    }
+
+    public List<Consulta> obterConsultasHistorico() {
+        return consultaRepository.obterConsultasHistorico();
+    }
 }
 

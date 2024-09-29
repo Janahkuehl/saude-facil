@@ -1,5 +1,6 @@
 package com.saude_facil_back.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,7 +22,10 @@ public class Medicamento {
 
     private String descricao;
     private String tempoLembrete;
-    private String imagem;
+    private String observacao;
+    private byte[] imagem;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm", timezone = "America/Sao_Paulo")
     private Date data;
 
 }

@@ -1,5 +1,6 @@
 package com.saude_facil_back.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,6 +10,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
@@ -26,8 +28,9 @@ public class Consulta {
     private String exame;
     private String especialidade;
     private String endereco;
-    private Date data;
     private Integer tempoLembrete;
     private String nota;
 
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm", timezone = "America/Sao_Paulo")
+    private Date data;
 }

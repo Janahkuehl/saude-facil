@@ -46,4 +46,14 @@ public class ConsultaController {
     public ResponseEntity<List<Consulta>> obterConsultasHoje() {
         return ResponseEntity.ok(consultaService.obterConsultasHoje());
     }
+
+    @GetMapping("/consultas-agendadas")
+    public ResponseEntity<List<Consulta>> obterConsultasAgendadas() {
+        return ResponseEntity.ok(consultaService.obterConsultasAgendadas());
+    }
+
+    @GetMapping("/consultas-historico")
+    public ResponseEntity<List<Consulta>> obterConsultasHistorico() {
+        return ResponseEntity.ok(consultaService.obterConsultasHistorico());
+    }
 }

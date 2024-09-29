@@ -11,4 +11,7 @@ public interface MedicamentoRepository extends JpaRepository<Medicamento, Intege
 
     @Query(value = "select * from medicamento where data between (CURRENT_DATE::TIMESTAMP) and ((CURRENT_DATE + INTERVAL '1 day') - INTERVAL '1 second')" , nativeQuery = true)
     List<Medicamento> obterMedicamentosHoje();
+
+    @Query(value = "select * from medicamento where data <= now() order by data desc", nativeQuery = true)
+    List<Medicamento> obterMedicamentosHistorico();
 }

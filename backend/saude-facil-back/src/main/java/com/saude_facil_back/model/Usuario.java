@@ -23,6 +23,8 @@ public class Usuario {
     private String telefone;
     private String sexo;
     private Integer idade;
+    private String senha;
     private boolean status;
+    private String foto;
 
 }
