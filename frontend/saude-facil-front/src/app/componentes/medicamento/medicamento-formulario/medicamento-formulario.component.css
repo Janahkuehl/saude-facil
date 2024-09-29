@@ -42,3 +42,7 @@ button.btn-success {
 .btn-success:hover {
     background-color: #218838;
 }
+
+.row div {
+    margin-bottom: 20px;
+}

@@ -31,4 +31,19 @@ export class UsuarioService {
   delete(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
+
+  uploadProfileImage(userId: number, imagem: File): Observable<any> {
+    const formData: FormData = new FormData();
+    formData.append('imagem', imagem);
+
+    return this.http.post(`${this.apiUrl}/${userId}/upload`, formData, { responseType: 'text' });
+  }
+
+  getProfileImage(userId: number): Observable<Blob> {
+    return this.http.get(`${this.apiUrl}/${userId}/imagem-perfil`, { responseType: 'blob' });
+  }
+
+  validarLogin(credenciais: any): Observable<Usuario> {
+    return this.http.post<Usuario>(`${this.apiUrl}/login`, credenciais);
+  }
 }

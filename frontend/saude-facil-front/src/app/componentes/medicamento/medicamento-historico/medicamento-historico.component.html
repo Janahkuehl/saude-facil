@@ -16,19 +16,10 @@
 
     <div class="row">
         <div class="col-12">
-            <div class="card consulta-item">
-                <p>Metotrexato | Semanal | 06:30</p>
-            </div>
-            <div class="card consulta-item">
-                <p>Omeprazol | Diário | 15/08/24 - 07:00</p>
-            </div>
-            <div class="card consulta-item">
-                <p>Propranolol | Diário | 18/08 - 07:30</p>
+            <div class="card medicamento-card" *ngFor="let medicamento of listaMedicamentos">
+                <p><strong>{{ medicamento.descricao }}</strong> | {{ medicamento.data | date:'dd/MM/yyyy HH:mm' }}</p>
             </div>
         </div>
     </div>
-</div>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </div>
 <app-menu></app-menu>

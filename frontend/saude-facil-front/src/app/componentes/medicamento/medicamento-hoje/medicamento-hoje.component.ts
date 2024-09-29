@@ -14,9 +14,10 @@ export class MedicamentoHojeComponent {
   ){}
 
   listaMedicamentos: Medicamento[] = [];
+  dataAtual: Date = new Date();
 
   ngOnInit(){
-    this.medicamentoService.findAll().subscribe(retorno => {
+    this.medicamentoService.obterMedicamentosHoje().subscribe(retorno => {
       this.listaMedicamentos = retorno;
     });
   }

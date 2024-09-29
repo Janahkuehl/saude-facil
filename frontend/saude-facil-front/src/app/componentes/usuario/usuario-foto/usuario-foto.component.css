@@ -1,4 +1,4 @@
-.file-upload {
+.container.file-upload {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,7 +22,6 @@ button.btn-success {
 
 .btn-success:hover {
     background-color: #218838;
-    border-color: #1e7e34;
 }
 
 .btn-link {
@@ -35,7 +34,6 @@ button.btn-success {
     text-decoration: underline;
 }
 
-/* Remover margem entre os botões */
 .d-flex .btn-link,
 .d-flex .btn-success {
     margin: 0;

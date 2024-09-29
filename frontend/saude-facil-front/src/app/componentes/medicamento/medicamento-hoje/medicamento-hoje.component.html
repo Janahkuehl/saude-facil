@@ -2,7 +2,7 @@
 <div class="container mt-4">
     <div class="row mb-3">
         <div class="col-12">
-            <a href="#" class="circle-button" routerLink="/medicamento-hoje">
+            <a href="#" class="circle-button" routerLink="/medicamento">
                 <span class="arrow-left"></span>
             </a>
         </div>
@@ -18,13 +18,13 @@
         <div class="row">
             <div class="d-flex flex-column justify-content-center align-items-start bg-light p-3 rounded">
                 <h3 class="mb-0">Medicamentos de Hoje</h3>
-                <p class="m-0">Quinta Feira, 03/10</p>
+                <p>{{ dataAtual | date: 'EEEE, d \'de\' MMMM' }}</p>
             </div>
         </div>
 
         <div class="row">
             <div class="col-12">
-                <div class="card consulta-card" *ngFor="let medicamento of listaMedicamentos">
+                <div class="card medicamento-card" *ngFor="let medicamento of listaMedicamentos">
                     <p><strong>{{ medicamento.descricao }}</strong> | {{ medicamento.data | date:'dd/MM/yyyy HH:mm' }}</p>
                 </div>
             </div>

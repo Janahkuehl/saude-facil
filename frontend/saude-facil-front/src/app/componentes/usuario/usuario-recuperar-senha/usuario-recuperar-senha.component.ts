@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './usuario-recuperar-senha.component.css'
 })
 export class UsuarioRecuperarSenhaComponent {
+mensagemSucesso: any;
 
 }

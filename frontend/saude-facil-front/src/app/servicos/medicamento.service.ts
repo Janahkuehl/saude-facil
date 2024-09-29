@@ -30,4 +30,23 @@ export class MedicamentoService {
   delete(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
+
+  obterMedicamentosHoje(): Observable<Medicamento[]> {
+    return this.http.get<Medicamento[]>(`${this.apiUrl}/hoje`);
+  }
+
+  obterMedicamentosHistorico(): Observable<Medicamento[]> {
+    return this.http.get<Medicamento[]>(`${this.apiUrl}/historico`);
+  }
+
+  uploadMedicamentoImagem(userId: number, imagem: File): Observable<any> {
+    const formData: FormData = new FormData();
+    formData.append('imagem', imagem);
+
+    return this.http.post(`${this.apiUrl}/${userId}/upload`, formData, { responseType: 'text' });
+  }
+
+  getMedicamentoImagem(userId: number): Observable<Blob> {
+    return this.http.get(`${this.apiUrl}/${userId}/imagem`, { responseType: 'blob' });
+  }
 }

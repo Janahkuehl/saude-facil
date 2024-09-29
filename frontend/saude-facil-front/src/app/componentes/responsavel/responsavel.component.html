@@ -7,7 +7,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="consulta-item d-flex justify-content-between align-items-center" 
-            routerLink="/responsavel-formulario" 
+            [routerLink]="['/responsavel-formulario', responsavel.id]" 
             *ngFor="let responsavel of listaResponsaveis">
                 <span>{{responsavel.nome}} - {{responsavel.grauParentesco}}</span>
                 <i *ngIf="responsavel.favorito" class="bi bi-star-fill" style="color: gold;"></i> 
@@ -17,7 +17,7 @@
 
     <div class="row mt-3 justify-content-center">
         <div class="col-md-8 text-center">
-            <button class="btn btn-success custom-btn"routerLink="/ResponsavelFormularioComponent" routerLink="/responsavel-formulario">Inserir novo</button>
+            <button class="btn btn-success custom-btn"routerLink="/ResponsavelFormularioComponent" [routerLink]="['/responsavel-formulario', null]">Inserir novo</button>
         </div>
     </div>
 </div>

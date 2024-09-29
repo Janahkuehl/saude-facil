@@ -1,13 +1,11 @@
 <div class="d-flex justify-content-center align-items-center vh-100">
     <div class="col-8 col-md-6 text-center">
         <div class="card p-4 shadow-sm bg-light-purple">
-            <h5 class="card-title text-uppercase font-weight-bold">Metotrexato</h5>
-            <p class="card-text">Tomar um comprimido a cada 12 horas.</p>
-            <app-notificacao-imagem></app-notificacao-imagem>
-            <p class="card-text">Hoje às 14:00</p>
-            <button class="btn btn-confirm">CONFIRMADO</button>
+            <h5 class="card-title text-uppercase font-weight-bold">{{ medicamento.descricao }}</h5>
+            <p class="card-text">{{ medicamento.observacao }}</p>
+            <img [src]="medicamentoImagem" alt="imagem indisponível.....">
+            <p class="card-text">Hoje às {{medicamento.data | date:'HH:mm'}}</p>
+            <button class="btn btn-confirm" routerLink="/hoje">CONFIRMADO</button>
         </div>
     </div>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

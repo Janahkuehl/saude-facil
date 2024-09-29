@@ -4,4 +4,5 @@ export interface Medicamento{
     tempoLembrete: string;
     imagem: string;
     data: Date;
+    observacao: string;
 }

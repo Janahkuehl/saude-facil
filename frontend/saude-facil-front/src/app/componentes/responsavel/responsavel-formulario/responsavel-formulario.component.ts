@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Responsavel } from '../../interfaces/responsavel';
 import { ResponsavelService } from '../../../servicos/responsavel.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-responsavel-formulario',
@@ -21,8 +21,18 @@ export class ResponsavelFormularioComponent {
 
   constructor(
     private responsavelService: ResponsavelService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
   ){}
+
+  ngOnInit() {
+    const id: number = Number(this.route.snapshot.paramMap.get('id'));
+    if (id) {
+      this.responsavelService.findById(id).subscribe(retorno => {
+        this.responsavel = retorno;
+      });
+    }
+  }
 
   salvar(): void {
     this.responsavelService.add(this.responsavel).subscribe(() => {

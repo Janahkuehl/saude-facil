@@ -16,7 +16,8 @@ export class UsuarioFormularioComponent {
     status: false,
     telefone: '',
     sexo: '',
-    idade: 0
+    idade: 0,
+    senha: ''
   };
 
   constructor(

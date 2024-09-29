@@ -16,7 +16,10 @@ export class MedicamentoFormularioComponent {
     tempoLembrete: '',
     imagem: '',
     data: new Date,
+    observacao: ''
   };
+
+  selectedFile!: File;
 
   constructor(
     private medicamentoService: MedicamentoService,
@@ -24,9 +27,22 @@ export class MedicamentoFormularioComponent {
   ) { }
 
   salvar(): void {
-    this.medicamentoService.add(this.medicamento).subscribe(() => {
-      this.router.navigate(['/hoje']);
+    this.medicamentoService.add(this.medicamento).subscribe(novoMedicamento => {
+      this.uploadImage(novoMedicamento);
     });
+  }
+
+  onFileSelected(event: any) {
+    this.selectedFile = event.target.files[0];
+  }
+
+  uploadImage(medicamento: Medicamento) {
+    this.medicamentoService.uploadMedicamentoImagem(medicamento.id, this.selectedFile).subscribe(
+      () => {
+        this.router.navigate(['/hoje']);
+      },
+      error => console.error(error)
+    );
   }
 
 }

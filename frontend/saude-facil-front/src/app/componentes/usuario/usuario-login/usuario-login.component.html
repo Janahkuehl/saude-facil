@@ -6,17 +6,28 @@
             </div>
             <form>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="phone-email" placeholder="Insira o telefone" required>
+                    <input 
+                        type="text" 
+                        id="telefone" 
+                        name="telefone" 
+                        [(ngModel)]="usuario.telefone" 
+                        class="form-control"
+                        placeholder="Insira o telefone" required>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="password" placeholder="Senha" required>
+                    <input 
+                    type="password" 
+                    id="senha" 
+                    name="senha" 
+                    [(ngModel)]="usuario.senha"
+                    class="form-control" 
+                    placeholder="Senha" required>
                 </div>
                 <div class="form-group d-flex justify-content-end">
-                    <a href="#" class="text-muted" routerLink="/usuario-esquecisenha">Esqueci minha senha</a>
-                    <!-- Aqui preciso pensar como fazer o envio do sms para recuperar a senha, mensagem que será exibida na tela -->
+                    <a href="#" class="text-muted" routerLink="/usuario-recuperar-senha">Esqueci minha senha</a>
                 </div>
                 <div class="d-flex justify-content-between">
-                    <button type="submit" class="btn btn-success btn-block mx-1" routerLink="/login">Entrar</button>
+                    <button type="submit" class="btn btn-success btn-block mx-1" routerLink="/hoje">Entrar</button>
                     <button type="button" class="btn btn-success btn-block mx-1" routerLink="/usuario-formulario">Cadastrar</button>
                 </div>
             </form>

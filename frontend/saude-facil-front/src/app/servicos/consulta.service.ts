@@ -35,4 +35,12 @@ export class ConsultaService {
   obterConsultasHoje(): Observable<Consulta[]> {
     return this.http.get<Consulta[]>(`${this.apiUrl}/consultas-hoje`);
   }
+
+  obterConsultasAgendadas(): Observable<Consulta[]> {
+    return this.http.get<Consulta[]>(`${this.apiUrl}/consultas-agendadas`);
+  }
+
+  obterConsultasHistorico(): Observable<Consulta[]> {
+    return this.http.get<Consulta[]>(`${this.apiUrl}/consultas-historico`);
+  }
 }
