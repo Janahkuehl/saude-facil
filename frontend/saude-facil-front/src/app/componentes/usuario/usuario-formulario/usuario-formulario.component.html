@@ -25,6 +25,11 @@
                     <option value="Feminino">Feminino</option>
                 </select>
             </div>
+            <div class="mb-3">
+                <label for="senha" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite seu senha"
+                    [(ngModel)]="usuario.senha">
+            </div>
             <button class="btn btn-success w-100 rounded-pill" (click)="salvar()">Cadastrar</button>
         </form>
     </div>

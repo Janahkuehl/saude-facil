@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Usuario } from '../../interfaces/usuario';
 import { UsuarioService } from '../../../servicos/usuario.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-usuario-foto',
@@ -11,49 +11,30 @@ import { Router } from '@angular/router';
 export class UsuarioFotoComponent {
 
   usuario!: Usuario;
-  selectedFile!: File;
-  profileImage: any;
+  usuarioFoto: any;
+  route: any;
 
   constructor(
     private usuarioService: UsuarioService,
-    private router: Router
+    private router: ActivatedRoute
   ) {}
 
-  onFileSelected(event: any) {
-    this.selectedFile = event.target.files[0];
-    this.usuario.imagemPerfil = event.target.files[0];
-  }
-
-  uploadImage() {
-    this.usuarioService.uploadProfileImage(this.usuario.id, this.selectedFile).subscribe(
-      response => {
-        this.getProfileImage(this.usuario.id);
-      },
-      error => console.error(error)
-    );
-  }
-
   ngOnInit() {
-    const id = Number(sessionStorage.getItem('usuario-id'));
-    this.usuarioService.findById(id).subscribe(response => {
-      this.usuario = response;
-      this.getProfileImage(this.usuario.id);
+    const id: number = Number(this.route.snapshot.paramMap.get('id'));
+    this.usuarioService.findById(id).subscribe(retorno => {
+      this.usuario = retorno;
+      // this.uploadProfileImage(this.usuario.id);
     });
   }
 
-  private getProfileImage(id: number){
-    this.usuarioService.getProfileImage(id).subscribe(
-      (image: Blob) => {
-        const urlCreator = window.URL || window.webkitURL;
-        this.profileImage = urlCreator.createObjectURL(image);
-      },
-      error => console.error(error)
-    );
-  }
-
-  sair(){
-    sessionStorage.clear();
-    this.router.navigate(['/login']);
-  }
+  // private uploadProfileImage(id: number){
+  //   this.usuarioService.uploadProfileImage(id).subscribe(
+  //     (image: Blob) => {
+  //       const urlCreator = window.URL || window.webkitURL;
+  //       this.uploadProfileImage = urlCreator.createObjectURL(image);
+  //     },
+  //     error => console.error(error)
+  //   );
+  // }
 
 }

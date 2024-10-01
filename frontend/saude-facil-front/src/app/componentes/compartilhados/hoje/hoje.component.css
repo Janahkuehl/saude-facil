@@ -5,17 +5,6 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.custom-card .card-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.custom-card .card-text {
-    font-size: 16px;
-    color: #333;
-}
-
 .container {
     max-width: 500px;
 }
@@ -25,3 +14,34 @@
     display: flex;
     justify-content: space-between;
 }
+
+.medicamento-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px; 
+    padding: 8px;
+    background-color: #e0f7e5; 
+    border-radius: 8px;
+  }
+  
+  .medicamento-item span {
+    font-size: 15px; 
+    font-weight: bold;
+  }
+  
+  .btn-custom {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 20px; 
+    padding: 5px 12px; 
+    font-size: 13px; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+  }
+  
+  .btn-custom:hover {
+    background-color: #218838; 
+    transform: scale(1.05); 
+  }
+  

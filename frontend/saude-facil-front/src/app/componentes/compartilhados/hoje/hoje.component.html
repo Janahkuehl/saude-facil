@@ -14,13 +14,13 @@
                 <p class="card-text">
                     {{medicamento.descricao}} - {{medicamento.data | date:'HH:mm'}}
                 </p>
-                <button [routerLink]="['/notificacao-medicamento', medicamento.id]">Ver notificação</button>
+                <button class="btn btn-custom" [routerLink]="['/notificacao-medicamento', medicamento.id]">Ver notificação</button>
             </div>
         </div>
     </div>
     <div class="card custom-card mb-4">
         <div class="card-body">
-            <h5 class="card-title">Consultas Agendadas:</h5>
+            <h5 class="card-title">Consultas de Hoje:</h5>
             <p 
                 class="card-text" 
                 *ngFor="let consulta of listaConsultasHoje">

@@ -1,3 +1,4 @@
+
 .btn-custom {
   background-color: transparent;
   border: none;
@@ -8,8 +9,12 @@
   align-items: center;
 }
 
-.btn-custom:hover {
+.btn-custom:hover i,
+.btn-custom:hover span {
   color: #007bff;
+}
+
+.btn-custom:hover {
   transform: translateY(-5px);
 }
 
@@ -20,11 +25,6 @@
 .btn-custom span {
   font-size: 1rem;
   color: black;
-}
-
-.btn-custom:hover i,
-.btn-custom:hover span {
-  color: #007bff;
 }
 
 .container{

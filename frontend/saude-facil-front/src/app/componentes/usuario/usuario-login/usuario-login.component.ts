@@ -30,14 +30,14 @@ export class UsuarioLoginComponent {
 
     realizarLogin() {
         const credenciais = {
-            EMAIL: this.usuario.telefone,
+            TELEFONE: this.usuario.telefone,
             SENHA: this.usuario.senha
         };
 
         this.usuarioService.validarLogin(credenciais).subscribe(usuarioValido => {
             if (usuarioValido) {
                 this.salvarSessao(usuarioValido);
-                this.router.navigate(['/perfil']);
+                this.router.navigate(['/hoje']);
             } else {
                 this.erroLogin = true;
             }
@@ -47,7 +47,7 @@ export class UsuarioLoginComponent {
     salvarSessao(usuario: Usuario) {
         sessionStorage.setItem('usuario-id', usuario.id.toString());
         sessionStorage.setItem('usuario-nome', usuario.nome);
-        sessionStorage.setItem('usuario-email', usuario.telefone);
+        sessionStorage.setItem('usuario-telefone', usuario.telefone);
     }
 
 }

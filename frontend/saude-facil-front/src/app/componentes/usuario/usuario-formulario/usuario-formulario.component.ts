@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Usuario } from '../../interfaces/usuario';
 import { UsuarioService } from '../../../servicos/usuario.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-usuario-formulario',
@@ -22,12 +22,22 @@ export class UsuarioFormularioComponent {
 
   constructor(
     private usuarioService: UsuarioService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
   ){}
+
+  ngOnInit() {
+    const id: number = Number(sessionStorage.getItem('usuario-id'));
+    if (id) {
+      this.usuarioService.findById(id).subscribe(retorno => {
+        this.usuario = retorno;
+      });
+    }
+  }
 
   salvar(): void {
     this.usuarioService.add(this.usuario).subscribe(() => {
-      this.router.navigate(['/hoje']);
+      this.router.navigate(['/login']);
     });
   }
 

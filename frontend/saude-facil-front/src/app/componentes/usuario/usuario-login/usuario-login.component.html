@@ -27,10 +27,13 @@
                     <a href="#" class="text-muted" routerLink="/usuario-recuperar-senha">Esqueci minha senha</a>
                 </div>
                 <div class="d-flex justify-content-between">
-                    <button type="submit" class="btn btn-success btn-block mx-1" routerLink="/hoje">Entrar</button>
+                    <button type="submit" class="btn btn-success btn-block mx-1" (click)="realizarLogin()">Entrar</button>
                     <button type="button" class="btn btn-success btn-block mx-1" routerLink="/usuario-formulario">Cadastrar</button>
                 </div>
             </form>
+            <div *ngIf="erroLogin">
+                <p>Usuário ou senha incorretos</p>
+            </div>
         </div>
     </div>
 </div>

@@ -36,7 +36,7 @@ export class ResponsavelFormularioComponent {
 
   salvar(): void {
     this.responsavelService.add(this.responsavel).subscribe(() => {
-      this.router.navigate(['/hoje']);
+      this.router.navigate(['/responsavel']);
     });
   }
 

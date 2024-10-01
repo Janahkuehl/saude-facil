@@ -39,7 +39,7 @@ export class UsuarioService {
     return this.http.post(`${this.apiUrl}/${userId}/upload`, formData, { responseType: 'text' });
   }
 
-  getProfileImage(userId: number): Observable<Blob> {
+  getUsuarioImagem(userId: number): Observable<Blob> {
     return this.http.get(`${this.apiUrl}/${userId}/imagem-perfil`, { responseType: 'blob' });
   }
 
