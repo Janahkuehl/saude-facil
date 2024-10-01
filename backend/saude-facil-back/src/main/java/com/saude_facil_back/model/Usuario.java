@@ -1,5 +1,6 @@
 package com.saude_facil_back.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.annotation.Nonnull;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -25,6 +26,9 @@ public class Usuario {
     private Integer idade;
     private String senha;
     private boolean status;
-    private String foto;
+
+    @JsonIgnore
+    private byte[] imagemPerfil;
 
 }
+
